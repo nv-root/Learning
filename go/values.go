@@ -1,3 +1,16 @@
+// integers
+// float
+// complex numbers
+// booleans
+// strings
+
+// arrays
+// slices
+// maps
+// structs
+
+// pointers
+
 package main
 
 import "fmt"

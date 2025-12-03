@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	format "fmt"
+	"net/http"
+)
 
-func main(){
-	fmt.Println("Hello Go!")
+func main() {
+	format.Println("Hello Go!")
+
+	res, err := http.Get("https://api.github.com/users/nv-root")
+	if err != nil {
+		format.Println("Error: ", err)
+		return
+	}
+
+	defer res.Body.Close()
+	format.Println(res.Status)
 }

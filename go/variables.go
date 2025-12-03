@@ -3,12 +3,13 @@ package main
 import "fmt"
 
 var outside = "OUTSIDE"
+
 // outside2 := "OUTSIDE2"
 
-func main(){
+func main() {
 
 	var name = "nv-root"
-	fmt.Println("Name:",name)
+	fmt.Println("Name:", name)
 
 	var age, language = 18, "go"
 	fmt.Println("Age:", age, "\nLanguage:", language)
@@ -21,6 +22,15 @@ func main(){
 	fmt.Println(emptyIntVar)
 	fmt.Println("-_-", emptyStrVar)
 
+	/*
+
+		default values
+		numerics : 0
+		strings : ""
+		boolean : false
+		pointers, slices, maps, functions, structs : nil
+
+	*/
 	fruit := "apple"
 	fmt.Println(fruit)
 

@@ -3,20 +3,30 @@ package main
 import "fmt"
 import "unsafe"
 
-const s string = "constant"
+const S string = "constant"
 
-func main(){
+func main() {
 
-	fmt.Println(s)
-	// s = "reassigned"
-	fmt.Printf("Type of s: %T\n", s)
+	fmt.Println(S)
+	// S = "reassigned"
+	fmt.Printf("Type of S: %T\n", S)
 
-	const c = 10
-	fmt.Println(c)
-	fmt.Printf("Type of c: %T\n", c)
+	const C = 10
+	fmt.Println(C)
+	fmt.Printf("Type of C: %T\n", C)
 
-	const x  = 500
-	fmt.Printf("Type of x: %T\n", x)
+	const X = 500
+	fmt.Printf("Type of X: %T\n", X)
+
+	const (
+		MONDAY    = 1
+		TUESDAY   = 2
+		WEDNESDAY = 3
+	)
+
+	fmt.Println(MONDAY)
+	fmt.Println(TUESDAY)
+	fmt.Println(WEDNESDAY)
 
 	fmt.Println(unsafe.Sizeof(int(0)))
 	fmt.Println(unsafe.Sizeof(int8(0)))
@@ -27,7 +37,5 @@ func main(){
 	var i64 int64 = 64
 	// fmt.Println(i == i64)
 	fmt.Println(int64(i) == i64)
-
-
 
 }

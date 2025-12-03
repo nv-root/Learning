@@ -6,6 +6,29 @@ func main(){
 	var a [5]int
 	fmt.Println("Empty array:", a) // all 0s
 
+	var names [3]string
+	fmt.Println(names)
+	names[2] = "three"
+	names[1] = "two"
+	fmt.Println(names)
+	fmt.Println(len(names))
+
+	originalArray := [2]int{1, 2}
+	copiedArray := originalArray
+
+	copiedArray[0] = 100
+
+	fmt.Println("Original array:", originalArray)
+	fmt.Println("Copied array:", copiedArray)
+
+	
+	var arrPtr *[2]int
+	arrPtr = &originalArray
+	arrPtr[0] = 101
+
+	fmt.Println("Original array:", originalArray)
+
+
 	a[2] = 3
 	fmt.Println("set:", a)
 	fmt.Println("get:", a[2])
@@ -16,6 +39,11 @@ func main(){
 
 	b = [...]int{11, 22, 33, 44, 55}
 	fmt.Println(b)
+
+	// looping over array
+	for _, value := range b{
+		fmt.Println(value)
+	}
 
 	b = [...]int{100, 3: 400, 500}
 	fmt.Println("zeroed:", b)

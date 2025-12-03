@@ -27,6 +27,7 @@ func main(){
 
 	// i - starting byte index of the rune, c - rune
 	for i, c := range "go-go-go"{ 
-		fmt.Println(i, c)
+		// fmt.Println(i, c)
+		fmt.Printf("\nIndex: %d, Rune: %c\n", i, c)
 	}
 }
