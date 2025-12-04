@@ -7,7 +7,10 @@ func zeroval(ival int){
 }
 
 func zeroptr(iptr *int){
+	fmt.Println("before modifying", *iptr)
 	*iptr = 0
+	fmt.Println(iptr)
+	fmt.Println("after modifying", *iptr)
 }
 
 func main(){
@@ -21,5 +24,5 @@ func main(){
 	zeroptr(&i)
 	fmt.Println("zeroptr:", i)
 
-	fmt.Println("i pointer:", &i)
+	fmt.Println("i address:", &i)
 }
