@@ -1,9 +1,14 @@
 package main
 
-import "github.com/sirupsen/logrus"
-import "go.uber.org/zap"
+import (
+	"github.com/sirupsen/logrus"
+	"go.uber.org/zap"
+)
 
 func main() {
+
+	NativeLogging()
+
 	log := logrus.New()
 
 	log.SetLevel(logrus.InfoLevel)
